@@ -103,11 +103,12 @@ export default class ActionButton extends Component {
       alignItems: 'center',
       justifyContent: 'center',
     }
+    console.log('1.ActionButton isAndroid: ', isAndroid);
 
     return (
       <View style={{ paddingHorizontal: this.props.offsetX }}>
         <Touchable
-          background={isAndroid && (Platform['Version'] >= 21) ? TouchableNativeFeedback.Ripple('rgba(255,255,255,0.75)') : TouchableNativeFeedback.SelectableBackground()}
+          background={isAndroid && ( (Platform['Version'] >= 21) ? TouchableNativeFeedback.Ripple('rgba(255,255,255,0.75)') : TouchableNativeFeedback.SelectableBackground() )}
           activeOpacity={0.85}
           onLongPress={this.props.onLongPress}
           onPress={() => {

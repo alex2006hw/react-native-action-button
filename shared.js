@@ -17,6 +17,6 @@ export const alignItemsMap = {
 };
 
 
-export const Touchable = Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback;
+export const Touchable = (Platform.OS === 'ios') ? TouchableOpacity : TouchableNativeFeedback;
 
-export const isAndroid = Platform.OS === 'android';
+export const isAndroid = (Platform.OS === 'android');
