@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { StyleSheet, Text, View, Animated, 
+import { StyleSheet, Text, View, Animated,
   TouchableNativeFeedback, TouchableWithoutFeedback, Dimensions, Platform } from 'react-native';
-import { shadowStyle, alignItemsMap, Touchable, isAndroid } from './shared';
+import { shadowStyle, alignItemsMap, Touchable } from './shared';
 
 const { width: WIDTH } = Dimensions.get('window');
 const SHADOW_SPACE = 10;
@@ -22,6 +22,7 @@ export default class ActionButtonItem extends Component {
   }
 
   render() {
+    const isAndroid = false;
     const { size, position, verticalOrientation, hideShadow, spacing } = this.props;
 
     if (!this.props.active) return null;

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { StyleSheet, Text, View, Animated, TouchableOpacity, TouchableNativeFeedback, Platform } from 'react-native';
 import ActionButtonItem from './ActionButtonItem';
-import { shadowStyle, alignItemsMap, Touchable, isAndroid } from './shared';
+import { shadowStyle, alignItemsMap, Touchable } from './shared';
 
 export default class ActionButton extends Component {
   constructor(props) {
@@ -13,6 +13,7 @@ export default class ActionButton extends Component {
 
     this.anim = new Animated.Value(props.active ? 1 : 0);
     this.timeout = null;
+    const isAndroid = false;
   }
 
   componentWillUnmount() {
